@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHub - Ultimate Free Games Portal</title>
+    <title>Unixgame - play now</title>
     <style>
         /*
-         * GameHub - Premium Gaming Landing Page
-         * Version 2.0 | 700+ Lines | Fully Responsive
-         * Features: Minimal spacing, Games first, Mobile optimized
-         */
-        
-        /* ==========================================================================
-           RESET & BASE STYLES
-        ========================================================================== */
+         * unixgame - Premium Gaming Landing Page
+          */
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +20,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #08efc5 0%, #0dd8ce 50%, #10cd7e 100%);
             color: #ffffff;
             min-height: 100vh;
             overflow-x: hidden;
@@ -35,9 +29,9 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ==========================================================================
-           HEADER
-        ========================================================================== */
+        /* =======================================================================================================================
+                                                                                               HEADER
+        ========================================================================================================================== */
         .header {
             background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(20px);
@@ -110,9 +104,9 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* ==========================================================================
-           SEARCH BAR
-        ========================================================================== */
+        /* =====================================================================================================================
+                                                                                    SEARCH BAR
+        ======================================================================================================================== */
         .search-section {
             padding: 0.5rem 0;
             max-width: 500px;
@@ -212,17 +206,17 @@
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));                      /*transparent columns adjust **************/*
+            gap: 1.2rem;                                                                       /* two logo ke beach ka distance*/
             margin-bottom: 2rem;
         }
 
         .game-card {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(100,100, 255, 0.08);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 100, 100, 0.1);
             border-radius: 20px;
-            padding: 1.5rem;
+            padding: 0.1rem;
             text-align: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -253,11 +247,11 @@
         }
 
         .game-icon {
-            width: 60px;
+            width: 60px;                                               /* height or width he game ke icon ke */
             height: 60px;
             margin: 0 auto 0.8rem;
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 15px;
+            border-radius: 15px;                                             /* icon ke shape ke lie*/
             display: flex;
             align-items: center;
             justify-content: center;
@@ -267,7 +261,7 @@
         }
 
         .game-card:hover .game-icon {
-            transform: rotate(360deg) scale(1.1);
+            transform: rotate(360deg) scale(1.1);                          /* jo game ke icon ko rotate kar raha he*/
         }
 
         .game-card h3 {
@@ -510,7 +504,7 @@
         }
 
         /* ==========================================================================
-           SCROLL ANIMATIONS
+                                                                                                   SCROLL ANIMATIONS
         ========================================================================== */
         .reveal {
             opacity: 0;
@@ -589,18 +583,18 @@
     <section class="logo-section reveal">
         <div class="container">
             <div class="logo" role="img" aria-label="GameHub Logo">🎮</div>
-            <h1 class="game-title" aria-label="GameHub">GameHub</h1>
+            <h1 class="game-title" aria-label="GameHub">Unixgame</h1>
         </div>
     </section>
 
-    <!-- Search Bar -->
+    <!--------------------------------------------------------------------------------------------------------------------------- Search Bar -->
     <section class="search-section reveal">
         <div class="container">
             <div class="search-container">
                 <div class="search-icon" aria-hidden="true">🔍</div>
                 <input type="text" 
                        class="search-box" 
-                       placeholder="Search games... (Tic Tac Toe, Snake, Puzzle)" 
+                       placeholder="Search games..." 
                        id="searchInput"
                        autocomplete="off"
                        aria-label="Search games">
@@ -613,40 +607,39 @@
         </div>
     </section>
 
-    <!-- GAMES SECTION - Featured Games First -->
+    <!--------------------------------------------------------------------------------------------------------------------- GAMES SECTION - Featured Games First -->
     <section class="games-section reveal" id="gamesGrid">
         <div class="container">
-            <h2 class="games-title">Featured Games</h2>
             <div class="games-grid">
                 <article class="game-card" data-tags="strategy puzzle" tabindex="0">
                     <div class="game-icon" aria-hidden="true">✗</div>
                     <h3>Tic Tac Toe</h3>
-                    <p>Classic 3x3 strategy game against AI</p>
+        
                 </article>
                 <article class="game-card" data-tags="arcade classic" tabindex="0">
                     <div class="game-icon" aria-hidden="true">🐍</div>
                     <h3>Snake Game</h3>
-                    <p>Eat food, grow longer, avoid walls</p>
+                   
                 </article>
                 <article class="game-card" data-tags="puzzle memory" tabindex="0">
                     <div class="game-icon" aria-hidden="true">🧠</div>
                     <h3>Memory Match</h3>
-                    <p>Match all card pairs in record time</p>
+                   
                 </article>
                 <article class="game-card" data-tags="action reaction" tabindex="0">
                     <div class="game-icon" aria-hidden="true">⚡</div>
                     <h3>Reaction Test</h3>
-                    <p>Test your reflexes - click when green!</p>
+                    
                 </article>
                 <article class="game-card" data-tags="puzzle logic" tabindex="0">
                     <div class="game-icon" aria-hidden="true">🧩</div>
                     <h3>2048 Game</h3>
-                    <p>Slide tiles to reach 2048</p>
+                   
                 </article>
                 <article class="game-card" data-tags="arcade action" tabindex="0">
                     <div class="game-icon" aria-hidden="true">🚀</div>
                     <h3>Space Shooter</h3>
-                    <p>Destroy enemy ships, upgrade weapons</p>
+                   
                 </article>
             </div>
         </div>
